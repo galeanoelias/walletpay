@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { baseUrl } from "../../../../axios/axiosInstance";
-import { errorAlert } from "./modalError";
+// import { errorAlert } from "./modalError";
 import { LoadingModal } from "../../../components/LoadingModal";
 import Layout from "../../../components/layout";
 
@@ -24,7 +24,7 @@ export const TransferCheck = () => {
         .then(({ data }) => setDataUser(data))
         .catch((err) => {
           console.log(err);
-          errorAlert();
+          // errorAlert();
           setTimeout(() => {
             navigate("/transfer", { replace: true });
           }, 2500);
